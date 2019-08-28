@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置全局属性-->
+    <settings>
+        <!--使用jdbc的getGeneratekeys获取自增主键值-->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!--使用列别名替换别名　　默认true-->
+        <setting name="useColumnLabel" value="true"/>
+        <!--开启驼峰命名转换Table:create_time到 Entity(createTime)-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!-- log4j 配置输出 -->
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+
+    <plugins>
+        <!-- com.github.pagehelper为PageHelper类所在包名 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 使用下面的方式配置参数，后面会有所有的参数介绍 -->
+            <property name="helperDialect" value="mysql"/>
+            <property name="reasonable" value="true"/>
+            <!-- 支持通过 Mapper 接口参数来传递分页参数 自动根据 params 配置的字段中取值，查找到合适的值时就会自动分页  -->
+            <property name="supportMethodsArguments" value="true"/>
+            <!-- params 可以配置 pageNum,pageSize,count,pageSizeZero-->
+            <property name="params" value="pageNum=pageNumKey;pageSize=pageSizeKey;"/>
+        </plugin>
+    </plugins>
+
+
+
+
+</configuration>
