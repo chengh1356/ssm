@@ -26,7 +26,7 @@
         <!--扫描sql配置文件:mapper需要的xml文件-->
         <property name="mapperLocations">
             <list>
-                <value>classpath:mapper/*.xml</value>
+                <value>classpath:mappers/*.xml</value>
             </list>
         </property>
         <!--扫描entity包,使用别名,多个用;隔开-->

@@ -4,20 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ssm</groupId>
-    <artifactId>com.cgh</artifactId>
+    <groupId>com.cgh</groupId>
+    <artifactId>ssm</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
 
     <properties>
         <!-- plugin version -->
-        <plugin.mybatis.generator>1.3.1</plugin.mybatis.generator>
+        <plugin.mybatis.generator>1.3.5</plugin.mybatis.generator>
         <!-- lib version -->
         <junit.version>4.11</junit.version>
         <spring.version>4.2.5.RELEASE</spring.version>
         <mybatis.version>3.2.2</mybatis.version>
         <mybatis.spring.version>1.2.2</mybatis.spring.version>
-        <mysql.connector.version>5.1.30</mysql.connector.version>
+        <mysql.connector.version>5.1.40</mysql.connector.version>
         <slftj.version>1.6.6</slftj.version>
         <log4j.version>1.2.12</log4j.version>
 
@@ -132,6 +132,13 @@
                     <verbose>true</verbose>
                     <overwrite>true</overwrite>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.connector.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
         </plugins>
