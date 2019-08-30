@@ -1,0 +1,166 @@
+/*
+ * Copyright (c) 2017. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
+@charset "utf-8";
+.tzgg_pages {
+    height: 24px;
+    padding: 20px 0;
+    margin: 0 auto;
+    border: 0px;
+    outline: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+
+.tzgg_pages li {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 50px;
+    line-height: 24px;
+    border: 1px solid #02b2b5;
+    font-size: 12px;
+    background: #e5f5ec;
+    text-align: center;
+    color: #999;
+}
+
+.tzgg_pages li.all_page {
+    padding: 0 5px;
+    font-size: 12px;
+    border: none;
+    background: none;
+    color: #333;
+}
+
+#turn {
+    float: left;
+    width: 90px;
+    display: block;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #333;
+}
+
+.tzgg_gg {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    line-height: 42px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #02b2b5;
+    text-indent: 14px;
+    font: 16px "微软雅黑","Arial Narrow",HELVETICA;
+}
+
+.tzgg_tttle {
+    font: 35px "微软雅黑","Arial Narrow",HELVETICA;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tzgg_time {
+    margin-left: 55%;
+    display: inline;
+    font: 13px "微软雅黑","Arial Narrow",HELVETICA;
+}
+
+.tzgg_author {
+    padding-left: 10%;
+    display: inline;
+    font: 13px "微软雅黑","Arial Narrow",HELVETICA;
+}
+
+.detail_xltit {
+    color: #333;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "仿宋_GB2312";
+    padding: 1px 0 5px 0;
+    text-align: center;
+    border-bottom: 1px dashed #e3e3e3;
+}
+
+.tzgg_content {
+    font: 16px "仿宋_GB2312","Arial Narrow",HELVETICA;
+    line-height: 200%;
+    margin: 0;
+    padding: 0;
+    text-indent: 2em;
+}
+
+.tzgg_right {
+    font: 18px "微软雅黑","Arial Narrow",HELVETICA;
+    line-height: 200%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
+}
+
+#file-list {
+    display: inline;
+    list-style-type: none;
+}
+
+#file-list li{
+    text-align: match-parent;
+    margin-bottom: 10px;
+    display: list-item;
+}
+
+
+.file-name {
+    display: inline-block;
+    margin: 0;
+    line-height: 30px;
+    text-align: match-parent;
+}
+
+#file-list .delete {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#main input[type=text] {
+    border: solid 1px #ccc;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family:"微软雅黑","Arial Narrow",HELVETICA;
+}
+
+#notice_title {
+    width: 500px;
+}
+
+.input_btn_1{
+    width:auto;
+    height:30px;
+    padding:0 15px;
+    border:none;
+    margin: 0 auto;
+    background:url(../images/btn_2.gif) repeat-x 0;
+    color:#fff;
+    font:bold 12px/30px Arial, Helvetica, sans-serif;
+    text-align:center;
+    cursor:pointer;
+}
+
+
+
+
+
+
+

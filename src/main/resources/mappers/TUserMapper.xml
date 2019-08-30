@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgh.dao.TUserMapper">
+  <resultMap id="BaseResultMap" type="com.cgh.entity.TUser">
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="wechat" jdbcType="VARCHAR" property="wechat" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="sfzh" jdbcType="VARCHAR" property="sfzh" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="job" jdbcType="VARCHAR" property="job" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="gfhtbh" jdbcType="VARCHAR" property="gfhtbh" />
+    <result column="jgbm" jdbcType="VARCHAR" property="jgbm" />
+    <result column="bmid" jdbcType="VARCHAR" property="bmid" />
+    <result column="yxx" jdbcType="TIMESTAMP" property="yxx" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_user
+    where uid = #{uid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cgh.entity.TUser">
+    insert into t_user (uid, username, password, 
+      wechat, name, phone, 
+      address, sfzh, sex, 
+      age, job, company, 
+      gfhtbh, jgbm, bmid, 
+      yxx)
+    values (#{uid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{wechat,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{sfzh,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{job,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR}, 
+      #{gfhtbh,jdbcType=VARCHAR}, #{jgbm,jdbcType=VARCHAR}, #{bmid,jdbcType=VARCHAR}, 
+      #{yxx,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TUser">
+    update t_user
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      wechat = #{wechat,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      sfzh = #{sfzh,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      job = #{job,jdbcType=VARCHAR},
+      company = #{company,jdbcType=VARCHAR},
+      gfhtbh = #{gfhtbh,jdbcType=VARCHAR},
+      jgbm = #{jgbm,jdbcType=VARCHAR},
+      bmid = #{bmid,jdbcType=VARCHAR},
+      yxx = #{yxx,jdbcType=TIMESTAMP}
+    where uid = #{uid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select uid, username, password, wechat, name, phone, address, sfzh, sex, age, job, 
+    company, gfhtbh, jgbm, bmid, yxx
+    from t_user
+    where uid = #{uid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select uid, username, password, wechat, name, phone, address, sfzh, sex, age, job, 
+    company, gfhtbh, jgbm, bmid, yxx
+    from t_user
+  </select>
+</mapper>

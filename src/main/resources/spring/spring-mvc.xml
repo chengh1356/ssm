@@ -29,5 +29,8 @@
         2、允许使用"/"做整体映射
         druid监控已做处理
     -->
-    <!--<mvc:default-servlet-handler/>-->
+    <mvc:default-servlet-handler/>
+    <mvc:resources mapping="/static/**" location="WEB-INF/static/" />
+    <!-- 视图控制器 直接访问public下的jsp -->
+    <mvc:view-controller path="/public/**"/>
 </beans>

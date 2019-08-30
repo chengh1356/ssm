@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2017. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
+@charset "utf-8";
+.menu_select{height:45px;width:170px;background-color:#02b2b5;cursor:pointer}
+.menu_select span{margin-left:10px; color:#FFF;}
+.menu_noselect{height:45px;width:170px;background-color:#EEEEEE;cursor:pointer}
+.menu_noselect span{margin-left:10px; color:#000;}
+
+.dashedlic{border-bottom:1px dashed #CCC; height:5px;width:200px; margin-left:5px;}

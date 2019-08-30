@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgh.dao.TRoseMapper">
+  <resultMap id="BaseResultMap" type="com.cgh.entity.TRose">
+    <id column="rid" jdbcType="VARCHAR" property="rid" />
+    <result column="rosename" jdbcType="VARCHAR" property="rosename" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_rose
+    where rid = #{rid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cgh.entity.TRose">
+    insert into t_rose (rid, rosename)
+    values (#{rid,jdbcType=VARCHAR}, #{rosename,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TRose">
+    update t_rose
+    set rosename = #{rosename,jdbcType=VARCHAR}
+    where rid = #{rid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select rid, rosename
+    from t_rose
+    where rid = #{rid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select rid, rosename
+    from t_rose
+  </select>
+</mapper>

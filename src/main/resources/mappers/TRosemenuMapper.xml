@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgh.dao.TRosemenuMapper">
+  <resultMap id="BaseResultMap" type="com.cgh.entity.TRosemenu">
+    <id column="rmid" jdbcType="VARCHAR" property="rmid" />
+    <result column="rid" jdbcType="VARCHAR" property="rid" />
+    <result column="mid" jdbcType="VARCHAR" property="mid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_rosemenu
+    where rmid = #{rmid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cgh.entity.TRosemenu">
+    insert into t_rosemenu (rmid, rid, mid
+      )
+    values (#{rmid,jdbcType=VARCHAR}, #{rid,jdbcType=VARCHAR}, #{mid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TRosemenu">
+    update t_rosemenu
+    set rid = #{rid,jdbcType=VARCHAR},
+      mid = #{mid,jdbcType=VARCHAR}
+    where rmid = #{rmid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select rmid, rid, mid
+    from t_rosemenu
+    where rmid = #{rmid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select rmid, rid, mid
+    from t_rosemenu
+  </select>
+</mapper>
