@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgh.dao.TPccdbMapper">
-  <resultMap id="BaseResultMap" type="com.cgh.entity.TPccdb">
+  <resultMap id="BaseResultMap" type="com.cgh.domain.TPccdb">
     <id column="pcid" jdbcType="VARCHAR" property="pcid" />
     <result column="mc" jdbcType="VARCHAR" property="mc" />
     <result column="lx" jdbcType="VARCHAR" property="lx" />
@@ -14,7 +14,7 @@
     delete from t_pccdb
     where pcid = #{pcid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.cgh.entity.TPccdb">
+  <insert id="insert" parameterType="com.cgh.domain.TPccdb">
     insert into t_pccdb (pcid, mc, lx, 
       pid, url, img, sort
       )
@@ -22,7 +22,7 @@
       #{pid,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TPccdb">
+  <update id="updateByPrimaryKey" parameterType="com.cgh.domain.TPccdb">
     update t_pccdb
     set mc = #{mc,jdbcType=VARCHAR},
       lx = #{lx,jdbcType=VARCHAR},

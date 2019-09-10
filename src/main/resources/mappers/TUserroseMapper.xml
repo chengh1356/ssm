@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgh.dao.TUserroseMapper">
-  <resultMap id="BaseResultMap" type="com.cgh.entity.TUserrose">
+  <resultMap id="BaseResultMap" type="com.cgh.domain.TUserrose">
     <id column="urid" jdbcType="VARCHAR" property="urid" />
     <result column="uid" jdbcType="VARCHAR" property="uid" />
     <result column="rid" jdbcType="VARCHAR" property="rid" />
@@ -10,13 +10,13 @@
     delete from t_userrose
     where urid = #{urid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.cgh.entity.TUserrose">
+  <insert id="insert" parameterType="com.cgh.domain.TUserrose">
     insert into t_userrose (urid, uid, rid
       )
     values (#{urid,jdbcType=VARCHAR}, #{uid,jdbcType=VARCHAR}, #{rid,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TUserrose">
+  <update id="updateByPrimaryKey" parameterType="com.cgh.domain.TUserrose">
     update t_userrose
     set uid = #{uid,jdbcType=VARCHAR},
       rid = #{rid,jdbcType=VARCHAR}

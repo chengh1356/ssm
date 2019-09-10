@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgh.dao.TRosemenuMapper">
-  <resultMap id="BaseResultMap" type="com.cgh.entity.TRosemenu">
+  <resultMap id="BaseResultMap" type="com.cgh.domain.TRosemenu">
     <id column="rmid" jdbcType="VARCHAR" property="rmid" />
     <result column="rid" jdbcType="VARCHAR" property="rid" />
     <result column="mid" jdbcType="VARCHAR" property="mid" />
@@ -10,13 +10,13 @@
     delete from t_rosemenu
     where rmid = #{rmid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.cgh.entity.TRosemenu">
+  <insert id="insert" parameterType="com.cgh.domain.TRosemenu">
     insert into t_rosemenu (rmid, rid, mid
       )
     values (#{rmid,jdbcType=VARCHAR}, #{rid,jdbcType=VARCHAR}, #{mid,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TRosemenu">
+  <update id="updateByPrimaryKey" parameterType="com.cgh.domain.TRosemenu">
     update t_rosemenu
     set rid = #{rid,jdbcType=VARCHAR},
       mid = #{mid,jdbcType=VARCHAR}

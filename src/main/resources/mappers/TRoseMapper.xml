@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgh.dao.TRoseMapper">
-  <resultMap id="BaseResultMap" type="com.cgh.entity.TRose">
+  <resultMap id="BaseResultMap" type="com.cgh.domain.TRose">
     <id column="rid" jdbcType="VARCHAR" property="rid" />
     <result column="rosename" jdbcType="VARCHAR" property="rosename" />
   </resultMap>
@@ -9,11 +9,11 @@
     delete from t_rose
     where rid = #{rid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.cgh.entity.TRose">
+  <insert id="insert" parameterType="com.cgh.domain.TRose">
     insert into t_rose (rid, rosename)
     values (#{rid,jdbcType=VARCHAR}, #{rosename,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.cgh.entity.TRose">
+  <update id="updateByPrimaryKey" parameterType="com.cgh.domain.TRose">
     update t_rose
     set rosename = #{rosename,jdbcType=VARCHAR}
     where rid = #{rid,jdbcType=VARCHAR}
